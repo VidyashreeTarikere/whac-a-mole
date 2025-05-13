@@ -3,7 +3,7 @@ import "./Moles.css";
 import moleImg from "../assets/mole.png";
 import malletImg from "../assets/mallet.png";
 import malletRotatedImg from "../assets/malletRotate.png";
-// import malletMP3 from "../assets/malletMP3.mp3";
+import malletMP3 from "../assets/malletHit.mp3";
 import Yourscore from "./Yourscore";
 import Timer from "./Timer";
 import Bestscore from "./Bestscore";
@@ -17,7 +17,7 @@ const Moles = () => {
   const [gameEnd, setGameEnd] = useState(false);
   const [rotateCursor, setRotateCursor] = useState(false);
 
-  let audio = new Audio("src/assets/malletHit.mp3");
+  let audio = new Audio(`${malletMP3}`);
 
   const handleStartBtn = () => {
     setCounter(30);
